@@ -14,7 +14,7 @@
   <script src="https://cdn.jsdelivr.net/npm/v-jsoneditor@1.4.1/dist/v-jsoneditor.min.js"></script>
 
   <script>
-    window.baseURL = '{{ url(request()->path()) }}';
+    window.baseURL = '{{str_replace( 'http://', 'https://',  url(request()->path()) ) }}';
     axios.defaults.baseURL = baseURL;
   </script>
 </head>
