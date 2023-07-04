@@ -14,7 +14,7 @@
   <script src="https://cdn.jsdelivr.net/npm/v-jsoneditor@1.4.1/dist/v-jsoneditor.min.js"></script>
 
   <script>
-    window.baseURL = '{{config('websocket.server_with_https') ? str_replace( 'http://', 'https://',  url(request()->path()) ) :  url(request()->path())}}';
+    window.baseURL = '{{config('app.server_with_https') ? str_replace( 'http://', 'https://',  url(request()->path()) ) :  url(request()->path())}}';
     axios.defaults.baseURL = baseURL;
   </script>
 </head>
